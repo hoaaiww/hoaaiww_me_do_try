@@ -23,4 +23,4 @@ Config.Duration             = 5 -- Text duration in seconds
 Config.Distance             = 20 -- Distance about who can see my action (in meter)
 Config.TryChance            = 50 -- Chance of the try action (in %)
 Config.DropShadow           = false -- Drop shadow (3D text)
-Config.Font                 = 4 -- Font type by number (3D text)
+Config.Font                 = 4 -- Font type in number (3D text)
