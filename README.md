@@ -21,6 +21,6 @@
 
 * You can edit the configurations of the script in the ```config.lua```
 
-## Dependencies
+## Dependencies (If you want to use player name in text)
 
 * [ESX](https://github.com/FXServer-ESX/fxserver-es_extended)
