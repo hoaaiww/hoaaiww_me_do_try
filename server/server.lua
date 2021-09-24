@@ -1,5 +1,6 @@
 ESX = nil
 local success = nil
+local resourceVersion = '1.1' -- Don't touch this!
 
 TriggerEvent('esx:getSharedObject', function(obj) 
     ESX = obj 
@@ -125,7 +126,7 @@ function logTry(msg)
 end
 
 if Config.checkForUpdates then
-	local version = '1.1'
+	local version = resourceVersion
 	local resourceName = GetCurrentResourceName()
 	
 	Citizen.CreateThread(function()
