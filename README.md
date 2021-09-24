@@ -13,7 +13,7 @@
 ## How to install
 
 * Git ```arp_me_do_try```
-* Remove ```-master``` from ```arp_me_do_try```
+* Remove ```-main``` from ```arp_me_do_try```
 * Copy and paste ```arp_me_do_try``` folder to ```resources```
 * Add ```start arp_me_do_try``` to your ```server.cfg``` file
 
