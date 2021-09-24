@@ -1,4 +1,4 @@
-<h1 align='center'>Me, Do & Try V1.1</a></h1>
+<h1 align='center'>Me, Do & Try V1.2</a></h1>
 
 ## How is this work?
 
@@ -20,6 +20,12 @@
 ## Customizable script!
 
 * You can edit the configurations of the script in the ```config.lua```
+* You can even log thiese commands to your discord server! You can enable it in ```config.lua```
+Sample:
+```
+Config.Log                  = true
+Config.Logwebhook           = "Replace Me With Your Webhook Link"
+```
 
 ## Dependencies (If you want to use player names in text)
 
