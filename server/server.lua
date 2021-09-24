@@ -140,7 +140,7 @@ if Config.checkForUpdates then
 				elseif tonumber(version) > tonumber(data.medotryVersion) then
 					print("Your version of [^2arp_me_do_try^7] AKA: ^2"..resourceName.."^7 seems to be higher than the current version.")
 				else
-					print("[^2arp_me_do_try^7] AKA: ^2"..resourceName.."^7 is up to date!")
+					print("[^2arp_me_do_try^7] AKA: ^2"..resourceName.."^7 is up to date! ("..data.medotryVersion..")")
 				end
 			else
 				print("Version Check failed! HTTP Error Code: "..err)
