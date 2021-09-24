@@ -4,7 +4,7 @@ game 'gta5'
 name 'ARP /ME,DO,TRY'
 description '/me, /do & /try commands'
 author 'hoaaiww'
-version 'v1.0'
+version 'v1.2'
 url 'https://discord.io/AntiQRolePlay'
 
 client_script {
