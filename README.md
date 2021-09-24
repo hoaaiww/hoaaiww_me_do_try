@@ -12,7 +12,8 @@
 
 ## How to install
 
-* Git ```arp_me_do_try```
+* Git [arp_me_do_try](https://github.com/hoaaiww/arp_me_do_try)
+* Extract ```arp_me_do_try-main.rar```
 * Remove ```-main``` from ```arp_me_do_try```
 * Copy and paste ```arp_me_do_try``` folder to ```resources```
 * Add ```start arp_me_do_try``` to your ```server.cfg``` file
