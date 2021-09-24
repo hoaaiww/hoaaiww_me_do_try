@@ -17,6 +17,8 @@ Config.EnablePlayerName     = true -- Enable player ingame name in the text?
 Config.Log                  = false -- Enable/Disable logging?
 Config.Logwebhook           = "Your Webhook Url" -- If logging enabled then replace 'Your Webhook' with your Discord Channel Webhook
 
+Config.checkForUpdates      = true -- Check for updates
+
 ---------- Advanced options ----------
 
 Config.Duration             = 5 -- Text duration in seconds
