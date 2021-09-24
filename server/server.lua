@@ -123,3 +123,31 @@ function logTry(msg)
         PerformHttpRequest(Config.Logwebhook, function(err, text, headers) end, 'POST', json.encode({embeds = connect}), { ['Content-Type'] = 'application/json' })
     end
 end
+
+if Config.checkForUpdates then
+	local version = '1.1'
+	local resourceName = GetCurrentResourceName()
+	
+	Citizen.CreateThread(function()
+		function checkVersion(err, response, headers)
+			if err == 200 then
+				local data = json.decode(response)
+				if version ~= data.medotryVersion and tonumber(version) < tonumber(data.medotryVersion) then
+					print("[^2arp_me_do_try^7] AKA: ^2"..resourceName.."^7 ^1is outdated.\nNewest Version: "..data.medotryVersion.."\nYour Version: "..version.."\nPlease get the latest update from https://github.com/hoaaiww/arp_me_do_try")
+				elseif tonumber(version) > tonumber(data.medotryVersion) then
+					print("Your version of [^2arp_me_do_try^7] AKA: ^2"..resourceName.."^7 seems to be higher than the current version.")
+				else
+					print("[^2arp_me_do_try^7] AKA: ^2"..resourceName.."^7 is up to date!")
+				end
+			else
+				print("Version Check failed! HTTP Error Code: "..err)
+			end
+			
+			SetTimeout(3600000 * 2, checkVersionHTTPRequest)
+		end
+		function checkVersionHTTPRequest()
+			PerformHttpRequest("https://raw.githubusercontent.com/hoaaiww/version/main/version.json", checkVersion, "GET")
+		end
+		checkVersionHTTPRequest()
+	end)
+end
