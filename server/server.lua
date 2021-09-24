@@ -1,10 +1,12 @@
-ESX = nil
-local success = nil
-local resourceVersion = '1.1' -- Don't touch this!
+local resourceVersion, success = '1.2', nil -- Don't touch thiese!
 
-TriggerEvent('esx:getSharedObject', function(obj) 
-    ESX = obj 
-end)
+if Config.EnablePlayerName then
+    ESX = nil
+
+    TriggerEvent('esx:getSharedObject', function(obj) 
+        ESX = obj 
+    end)
+end
 
 RegisterCommand("me", function(source, args, rawCommand)
     if source ~= 0 then
