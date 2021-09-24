@@ -21,8 +21,8 @@ Config.checkForUpdates      = true -- Check for updates
 
 ---------- Advanced options ----------
 
-Config.Duration             = 5 -- Text duration in seconds
-Config.Distance             = 10 -- Distance about who can see my action (in meter)
+Config.Duration             = 5 -- Text duration (in seconds)
+Config.Distance             = 10 -- Who can see my action inside the distance (in meter)
 Config.TryChance            = 50 -- Chance of the try action (in %)
 Config.DropShadow           = false -- Drop shadow (3D text)
 Config.Font                 = 4 -- Font type in number (3D text)
