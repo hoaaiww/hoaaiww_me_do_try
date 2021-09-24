@@ -1,4 +1,4 @@
-<h1 align='center'>Me, Do & Try</a></h1>
+<h1 align='center'>Me, Do & Try V1.1</a></h1>
 
 ## How is this work?
 
