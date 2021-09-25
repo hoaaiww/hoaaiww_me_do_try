@@ -53,8 +53,8 @@ end)
 RegisterCommand("try", function(source, args, rawCommand)
     if source ~= 0 then
         local text = "There was an error processing the text!"
-        success = false
         if args[1] then
+            success = false
             if math.random(0, 100) <= Config.TryChance then
                 success = true
             end
