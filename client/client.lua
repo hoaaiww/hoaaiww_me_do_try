@@ -73,7 +73,7 @@ function TriggerOutput(Player, text, offset, action, successpls)
             TriggerEvent('chat:addMessage', {
                 color = { actionColor.r, actionColor.g, actionColor.b },
                 multiline = true,
-      	        template = '<div style="padding: 0.4vw; margin: 0.5vw; width: 400px; position: relative; right: 24px; background-color: '..chatBackground..'; border-radius: 5px;"><i style="position: relative; left: 50px;" class="fab fa-artstation"><i>  ['..actionText..']<div>{0}</div></i></div>',
+      	        template = '<div style="padding: 0.4vw; margin: 0.5vw; width: 400px; position: relative; right: 24px; background-color: '..chatBackground..'; border-radius: 5px;"><i style="position: relative; left: 50px;" class="fab fa-artstation">['..actionText..']<i><div>{0}</div></i></div>',
                 args = { text2 }
             })
         end
