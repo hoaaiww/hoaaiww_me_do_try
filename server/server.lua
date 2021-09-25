@@ -1,4 +1,4 @@
-local resourceVersion, success = '1.2', nil -- Don't touch thiese!
+local resourceVersion, success = '1.3', nil -- Don't touch thiese!
 
 if Config.EnablePlayerName then
     ESX = nil
