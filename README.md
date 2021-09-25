@@ -1,5 +1,7 @@
 <h1 align='center'>Me, Do & Try V1.2</a></h1>
 
+## How it looks like?
+*You can check it [here](https://forum.cfx.re/t/release-me-do-try-a-more-realistic-fivem-roleplay-addon/4764849)*
 ## How is this work?
 
 **Its a simple customized Me, Do & Try actions in one script you can use!**
