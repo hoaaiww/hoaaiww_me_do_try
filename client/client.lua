@@ -40,14 +40,14 @@ function TriggerOutput(Player, text, offset, action, successpls)
         local distance = Vdist2(PlayerCoords, OtherCoords)
         if distance < Config.Distance then
 
-            local text2 = text
+            local textChat = text
 
             if successpls == true then
-                text2 = text2 .. " ^7(^2Successful^7)"
+                textChat = textChat .. " ^7(^2Successful^7)"
             elseif successpls == false then
-                text2 = text2 .. " ^7(^1Unsuccessful^7)"
+                textChat = textChat .. " ^7(^1Unsuccessful^7)"
             elseif successpls == nil then
-                text2 = text2
+                textChat = textChat
             end
 
             local actionColor = nil
@@ -74,7 +74,7 @@ function TriggerOutput(Player, text, offset, action, successpls)
                 color = { actionColor.r, actionColor.g, actionColor.b },
                 multiline = true,
       	        template = '<div style="padding: 0.4vw; margin: 0.5vw; width: 400px; position: relative; right: 24px; background-color: '..chatBackground..'; border-radius: 5px;"><i style="position: relative; left: 50px;" class="fab fa-artstation">['..actionText..']<i><div>{0}</div></i></div>',
-                args = { text2 }
+                args = { textChat }
             })
         end
     end
@@ -114,7 +114,6 @@ function DrawText3D(x,y,z, text, action)
 
     if onScreen then
 
-        -- Formalize the text
         SetTextColour(actionColor.r, actionColor.g, actionColor.b, actionColor.a)
         SetTextScale(0.0*scale, 0.4*scale)
         SetTextFont(Config.Font)
@@ -124,13 +123,11 @@ function DrawText3D(x,y,z, text, action)
             SetTextDropshadow(10, 100, 100, 100, 255)
         end
 
-        -- Calculate width and height
         BeginTextCommandWidth("STRING")
         AddTextComponentString(text)
         local height = GetTextScaleHeight(0.45*scale, font)
         local width = EndTextCommandGetWidth(font)
 
-        -- Diplay the text
         SetTextEntry("STRING")
         AddTextComponentString(text)
         EndTextCommandDisplayText(_x, _y)
