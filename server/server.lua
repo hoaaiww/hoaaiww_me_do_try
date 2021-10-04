@@ -85,7 +85,7 @@ function logMe(msg)
                 ["description"] = msg:gsub("%^%d",""),
                 ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ"),
                 ["footer"] = {
-                    ["text"] = "Made by: hoaaiww",
+                    ["text"] = "ARP: /Me, Do & Try",
                 },
             }
         }
@@ -102,7 +102,7 @@ function logDo(msg)
                 ["description"] = msg:gsub("%^%d",""),
                 ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ"),
                 ["footer"] = {
-                    ["text"] = "Made by: hoaaiww",
+                    ["text"] = "ARP: /Me, Do & Try",
                 },
             }
         }
@@ -119,7 +119,7 @@ function logTry(msg)
                 ["description"] = msg:gsub("%^%d",""),
                 ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ"),
                 ["footer"] = {
-                    ["text"] = "Made by: hoaaiww",
+                    ["text"] = "ARP: /Me, Do & Try",
                 },
             }
         }
@@ -136,14 +136,14 @@ if Config.checkForUpdates then
 			if err == 200 then
 				local data = json.decode(response)
 				if version ~= data.medotryVersion and tonumber(version) < tonumber(data.medotryVersion) then
-					print("The [^2"..resourceName.."^7] ^1resource is outdated^7.\nLatest version: ^2"..data.medotryVersion.."^7\nInstalled version: ^1"..version.."^7\nGet the latest version here: https://github.com/hoaaiww/arp_me_do_try")
+					print("The [^2"..resourceName.."^7] resource is ^1outdated^7.\nLatest version: ^2"..data.medotryVersion.."\n^7Installed version: ^1"..version.."\n^7Get the latest version here: https://github.com/hoaaiww/arp_me_do_try")
 				elseif tonumber(version) > tonumber(data.medotryVersion) then
 					print("The [^2"..resourceName.."^7] resource version seems to be ^1higher^7 then the latest version. Please get the latest version here: https://github.com/hoaaiww/arp_me_do_try")
 				else
-					print("The [^2"..resourceName.."^7] resource is up to date! (^2" .. version .."^7)")
+					print("The [^2"..resourceName.."^7] resource is ^2up to date^7! (^2v" .. version .."^7)")
 				end
 			else
-				print("Version Check failed! HTTP Error Code: "..err)
+				print("^1Version Check failed!^7 HTTP Error Code: "..err)
 			end
 			
 			SetTimeout(3600000 * 2, checkVersionHTTPRequest)
