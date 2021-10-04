@@ -2,6 +2,9 @@
 
 #### UPDATE 1.4.1
 * Fixed the update checking system
+#### Working on
+* I'm working on a "**I have**" type command that when the player runs the command then he can select his own items that will be displayed in the chat as "***I have 2x xyz***".
+It could help sometimes if the player wants to show something for another player as text-rp
 
 ## How it looks like?
 *You can check it [here](https://forum.cfx.re/t/release-me-do-try-a-more-realistic-fivem-roleplay-addon/4764849)*
