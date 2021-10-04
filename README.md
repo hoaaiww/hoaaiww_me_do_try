@@ -1,5 +1,8 @@
 <h1 align='center'>Me, Do & Try</a></h1>
 
+#### UPDATE 1.4.1
+* Fixed the update checking system
+
 ## How it looks like?
 *You can check it [here](https://forum.cfx.re/t/release-me-do-try-a-more-realistic-fivem-roleplay-addon/4764849)*
 ## How is this work?
