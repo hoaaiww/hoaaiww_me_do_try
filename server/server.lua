@@ -1,4 +1,4 @@
-local resourceVersion, success = '1.4', nil -- Don't touch thiese!
+local resourceVersion, success = '1.4.1', nil -- Don't touch thiese!
 
 if Config.EnablePlayerName then
     ESX = nil
@@ -136,11 +136,11 @@ if Config.checkForUpdates then
 			if err == 200 then
 				local data = json.decode(response)
 				if version ~= data.medotryVersion and tonumber(version) < tonumber(data.medotryVersion) then
-					print("The [^2"..resourceName.."^7] ^1is outdated.\nThe newset version: ^2"..data.medotryVersion.."^7\nInstalled version: ^1"..version.."^7\nGet the latest version here: https://github.com/hoaaiww/arp_me_do_try")
+					print("The [^2"..resourceName.."^7] ^1resource is outdated^7.\nLatest version: ^2"..data.medotryVersion.."^7\nInstalled version: ^1"..version.."^7\nGet the latest version here: https://github.com/hoaaiww/arp_me_do_try")
 				elseif tonumber(version) > tonumber(data.medotryVersion) then
-					print("The [^2"..resourceName.."^7] resource version seems to be higher then the newset version. Please get the latest here: https://github.com/hoaaiww/arp_me_do_try")
+					print("The [^2"..resourceName.."^7] resource version seems to be ^1higher^7 then the latest version. Please get the latest version here: https://github.com/hoaaiww/arp_me_do_try")
 				else
-					print("A(z) [^2"..resourceName.."^7] is up to date! (" .. data.version..")")
+					print("The [^2"..resourceName.."^7] resource is up to date! (^2" .. version .."^7)")
 				end
 			else
 				print("Version Check failed! HTTP Error Code: "..err)
@@ -149,7 +149,7 @@ if Config.checkForUpdates then
 			SetTimeout(3600000 * 2, checkVersionHTTPRequest)
 		end
 		function checkVersionHTTPRequest()
-			PerformHttpRequest("https://raw.githubusercontent.com/hoaaiww/version/main/version.json", checkVersion, "GET")
+			PerformHttpRequest("https://raw.githubusercontent.com/hoaaiww/version/main/versions.json", checkVersion, "GET")
 		end
 		checkVersionHTTPRequest()
 	end)
