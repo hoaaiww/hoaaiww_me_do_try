@@ -4,7 +4,7 @@ game 'gta5'
 name 'ARP /ME,DO,TRY'
 description '/me, /do & /try commands'
 author 'hoaaiww'
-version 'v1.4.1'
+version 'v1.5'
 
 client_script {
     'config.lua',
