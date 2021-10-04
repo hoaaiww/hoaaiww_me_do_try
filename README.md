@@ -1,6 +1,6 @@
 <h1 align='center'>Me, Do & Try</a></h1>
 
-#### UPDATE 1.4.1
+#### UPDATE 1.5
 * Fixed the update checking system
 #### Working on
 * I'm working on a "**I have**" type command that when the player runs the command then he can select his own items that will be displayed in the chat as "***I have 2x xyz***".
