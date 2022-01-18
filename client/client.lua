@@ -22,10 +22,10 @@ function TriggerOutput(Player, text, offset, action, successpls)
         end
 
         while textEnabled do
-            Citizen.Wait(0)
+            Wait(0)
             local PlayerCoords = GetEntityCoords(GetPlayerPed(Player), false)
             local OtherCoords = GetEntityCoords(PlayerPedId(), false)
-            local distance = Vdist2(PlayerCoords, OtherCoords)
+            local distance = GetDistanceBetweenCoords(PlayerCoords, OtherCoords, true)
 
             if distance < Config.Distance then
                 DrawText3D(PlayerCoords['x'], PlayerCoords['y'], PlayerCoords['z']+offset -0.1, text, action)
@@ -37,9 +37,9 @@ function TriggerOutput(Player, text, offset, action, successpls)
     if Config.DisplayOnChat then
         local PlayerCoords = GetEntityCoords(GetPlayerPed(Player), false)
         local OtherCoords = GetEntityCoords(PlayerPedId(), false)
-        local distance = Vdist2(PlayerCoords, OtherCoords)
-        if distance < Config.Distance then
+        local distance = GetDistanceBetweenCoords(PlayerCoords, OtherCoords, true)
 
+        if distance < Config.Distance then
             local textChat = text
 
             if successpls == true then
@@ -80,7 +80,7 @@ function TriggerOutput(Player, text, offset, action, successpls)
     end
 
     Citizen.CreateThread(function()
-        Citizen.Wait(Config.Duration * 1000)
+        Wait(Config.Duration * 1000)
         textEnabled = false
     end)
 end
