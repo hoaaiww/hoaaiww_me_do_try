@@ -38,4 +38,4 @@ Config.Logwebhook           = "Replace Me With Your Webhook Link"
 
 ## Dependencies (If you want to use player names in text)
 
-* [ESX](https://github.com/FXServer-ESX/fxserver-es_extended)
+* [ESX](https://github.com/esx-framework/esx-legacy.git)
