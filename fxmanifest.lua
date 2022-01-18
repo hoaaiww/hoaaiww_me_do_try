@@ -16,3 +16,5 @@ server_scripts {
     '@mysql-async/lib/MySQL.lua',
     'server/server.lua'
 }
+
+dependency 'es_extended' -- https://github.com/esx-framework/esx-legacy.git
