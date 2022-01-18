@@ -18,7 +18,7 @@ Config.Log                  = false -- Enable/Disable logging?
 Config.Logwebhook           = "Your Webhook Url" -- If logging enabled then replace 'Your Webhook' with your Discord Channel Webhook
 
 Config.checkForUpdates      = true -- Check for updates
-Config.Versiob              = '1.6'
+Config.Version              = '1.6'
 
 ---------- Advanced options ----------
 
