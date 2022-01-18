@@ -12,7 +12,7 @@ Config.BackgroundColor_Try  = { r = 22, g = 173, b = 196, a = 150 }
 
 Config.DisplayOnChat        = true -- Display actions in chat?
 
-Config.EnablePlayerName     = true -- Enable player ingame name in the text?
+Config.EnablePlayerName     = true -- Enable player ingame name in the text? If true you need to have ESX
 
 Config.Log                  = false -- Enable/Disable logging?
 Config.Logwebhook           = "Your Webhook Url" -- If logging enabled then replace 'Your Webhook' with your Discord Channel Webhook
