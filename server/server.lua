@@ -1,4 +1,4 @@
-local resourceVersion, success = '1.5' -- Don't touch thiese!
+local success = nil -- Don't touch thiese!
 
 if Config.EnablePlayerName then
     ESX = nil
@@ -128,7 +128,7 @@ function logTry(msg)
 end
 
 if Config.checkForUpdates then
-	local version = resourceVersion
+	local version = Config.Version
 	local resourceName = GetCurrentResourceName()
 	
 	Citizen.CreateThread(function()
@@ -136,17 +136,17 @@ if Config.checkForUpdates then
 			if err == 200 then
 				local data = json.decode(response)
 				if version ~= data.medotryVersion and tonumber(version) < tonumber(data.medotryVersion) then
-					print("The [^2"..resourceName.."^7] resource is ^1outdated^7.\nLatest version: ^2"..data.medotryVersion.."\n^7Installed version: ^1"..version.."\n^7Get the latest version here: https://github.com/hoaaiww/arp_me_do_try")
+					print("The [^2"..resourceName.."^7] script is ^1outdated^7.\nLatest version: ^3"..data.medotryVersion.."\n^7Installed version: ^1"..version.."\n^2Update ^7the script here: ^5https://github.com/hoaaiww/arp_me_do_try ^7")
 				elseif tonumber(version) > tonumber(data.medotryVersion) then
-					print("The [^2"..resourceName.."^7] resource version seems to be ^1higher^7 then the latest version. Please get the latest version here: https://github.com/hoaaiww/arp_me_do_try")
+					print("The [^2"..resourceName.."^7] script is on ^1higher^7 version then the current up to date version! Please check to update: ^5https://github.com/hoaaiww/arp_me_do_try ^7")
 				else
-					print("The [^2"..resourceName.."^7] resource is ^2up to date^7! (^2v" .. version .."^7)")
+					print("The [^2"..resourceName.."^7] script is ^2up to date^7! Version: ^2' .. version ..'^7')
 				end
 			else
 				print("^1Version Check failed!^7 HTTP Error Code: "..err)
 			end
 			
-			SetTimeout(3600000 * 2, checkVersionHTTPRequest)
+			SetTimeout(7200000, checkVersionHTTPRequest)
 		end
 		function checkVersionHTTPRequest()
 			PerformHttpRequest("https://raw.githubusercontent.com/hoaaiww/version/main/versions.json", checkVersion, "GET")
