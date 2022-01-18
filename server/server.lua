@@ -1,4 +1,4 @@
-local success = nil -- Don't touch thiese!
+local success = nil -- Don't touch!
 
 if Config.EnablePlayerName then
     ESX = nil
