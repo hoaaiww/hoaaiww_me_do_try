@@ -1,7 +1,7 @@
 <h1 align='center'>Me, Do & Try</a></h1>
 
-#### UPDATE 1.5
-* Fixed the update checking system
+#### UPDATE 1.6
+* Fixed the `everyone can see the texts` problem *(for me it worked perfectly, now it won't be a problem I hope)*
 #### Working on
 * I'm working on a "**I have**" type command that when the player runs the command then he can select his own items that will be displayed in the chat as "***I have 2x xyz***".
 It could help sometimes if the player wants to show something for another player as text-rp
