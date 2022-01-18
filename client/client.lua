@@ -1,4 +1,8 @@
-local Displayer = 1
+local Displayer, playerSpawned = 1, false
+
+AddEventHandler("playerSpawned", function ()
+	playerSpawned = true
+end)
 
 RegisterNetEvent('arp_medotry:showText')
 AddEventHandler('arp_medotry:showText', function(text, source, output, success)
@@ -27,8 +31,10 @@ function TriggerOutput(Player, text, offset, action, successpls)
             local OtherCoords = GetEntityCoords(PlayerPedId(), false)
             local distance = GetDistanceBetweenCoords(PlayerCoords, OtherCoords, true)
 
-            if distance < Config.Distance then
-                DrawText3D(PlayerCoords['x'], PlayerCoords['y'], PlayerCoords['z']+offset -0.1, text, action)
+            if playerSpawned then
+                if distance < Config.Distance then
+                    DrawText3D(PlayerCoords['x'], PlayerCoords['y'], PlayerCoords['z']+offset -0.1, text, action)
+                end
             end
         end
         Displayer = Displayer - 1
@@ -39,43 +45,45 @@ function TriggerOutput(Player, text, offset, action, successpls)
         local OtherCoords = GetEntityCoords(PlayerPedId(), false)
         local distance = GetDistanceBetweenCoords(PlayerCoords, OtherCoords, true)
 
-        if distance < Config.Distance then
-            local textChat = text
+        if playerSpawned then
+            if distance < Config.Distance then
+                local textChat = text
 
-            if successpls == true then
-                textChat = textChat .. " ^7(^2Successful^7)"
-            elseif successpls == false then
-                textChat = textChat .. " ^7(^1Unsuccessful^7)"
-            elseif successpls == nil then
-                textChat = textChat
+                if successpls == true then
+                    textChat = textChat .. " ^7(^2Successful^7)"
+                elseif successpls == false then
+                    textChat = textChat .. " ^7(^1Unsuccessful^7)"
+                elseif successpls == nil then
+                    textChat = textChat
+                end
+
+                local actionColor = nil
+                local backgroundColor = nil
+
+                if action == "me" then
+                    actionColor = Config.TextColor_Me
+                    backgroundColor = Config.BackgroundColor_Me
+                    actionText = "Action"
+                elseif action == "do" then
+                    actionColor = Config.TextColor_Do
+                    backgroundColor = Config.BackgroundColor_Do
+                    actionText = "Happening"
+                elseif action == "try" then
+                    actionColor = Config.TextColor_Try
+                    backgroundColor = Config.BackgroundColor_Try
+                    actionText = "Trying"
+
+                end
+
+                local chatBackground = "rgba("..backgroundColor.r..", "..backgroundColor.g..", "..backgroundColor.b..", 50)"
+
+                TriggerEvent('chat:addMessage', {
+                    color = { actionColor.r, actionColor.g, actionColor.b },
+                    multiline = true,
+                    template = '<div style="padding: 0.4vw; margin: 0.5vw; width: 400px; position: relative; right: 24px; background-color: '..chatBackground..'; border-radius: 5px;"><i style="position: relative; left: 50px;" class="fab fa-artstation">['..actionText..']<i><div>{0}</div></i></div>',
+                    args = { textChat }
+                })
             end
-
-            local actionColor = nil
-            local backgroundColor = nil
-            
-            if action == "me" then
-                actionColor = Config.TextColor_Me
-                backgroundColor = Config.BackgroundColor_Me
-                actionText = "Action"
-            elseif action == "do" then
-                actionColor = Config.TextColor_Do
-                backgroundColor = Config.BackgroundColor_Do
-                actionText = "Happening"
-            elseif action == "try" then
-                actionColor = Config.TextColor_Try
-                backgroundColor = Config.BackgroundColor_Try
-                actionText = "Trying"
-
-            end
-
-            local chatBackground = "rgba("..backgroundColor.r..", "..backgroundColor.g..", "..backgroundColor.b..", 50)"
-
-            TriggerEvent('chat:addMessage', {
-                color = { actionColor.r, actionColor.g, actionColor.b },
-                multiline = true,
-      	        template = '<div style="padding: 0.4vw; margin: 0.5vw; width: 400px; position: relative; right: 24px; background-color: '..chatBackground..'; border-radius: 5px;"><i style="position: relative; left: 50px;" class="fab fa-artstation">['..actionText..']<i><div>{0}</div></i></div>',
-                args = { textChat }
-            })
         end
     end
 
