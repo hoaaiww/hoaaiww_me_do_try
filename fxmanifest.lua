@@ -1,17 +1,17 @@
-fx_version 'adamant'
+fx_version 'cerulean'
 game 'gta5'
 
-name 'ARP /ME,DO,TRY'
+name 'ARP /ME, DO & TRY'
 description '/me, /do & /try commands'
 author 'hoaaiww'
-version 'v1.5'
+version '1.6'
 
-client_script {
+client_scripts {
     'config.lua',
     'client/client.lua'
 }
 
-server_script {
+server_scripts {
     'config.lua',
     '@mysql-async/lib/MySQL.lua',
     'server/server.lua'
