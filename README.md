@@ -1,8 +1,9 @@
 <h1 align='center'>Me, Do & Try</a></h1>
 
-#### UPDATE 1.6
-* Fixed the `everyone can see the texts` problem *(for me it worked perfectly, now it won't be a problem I hope)*
-#### Working on
+#### UPDATE 2.0
+* Optimized resource and fixed all issues.
+* ESX and MySQL is not necessary anymore in case to run the script standalone, but if you want to use RP names then it will ask es_extended to work.
+#### Working on 
 * I'm working on a "**I have**" type command that when the player runs the command then he can select his own items that will be displayed in the chat as "***I have 2x xyz***".
 It could help sometimes if the player wants to show something for another player as text-rp
 
@@ -36,6 +37,6 @@ Config.Log                  = true
 Config.Logwebhook           = "Replace Me With Your Webhook Link"
 ```
 
-## Dependencies (If you want to use player names in text)
+## Dependencies (If you want to use ESX player names in text)
 
 * [ESX](https://github.com/esx-framework/esx-legacy.git)
