@@ -1,5 +1,5 @@
-RegisterNetEvent('arp_medotryhave:showText')
-AddEventHandler('arp_medotryhave:showText', function(source, tab)
+RegisterNetEvent('hoaaiww_medotry:showText')
+AddEventHandler('hoaaiww_medotry:showText', function(source, tab)
     local textEnabled = true
     local currentPlayer = GetPlayerFromServerId(source)
     local text = (tab.name ~= nil and tab.name..': ') .. tab.text
