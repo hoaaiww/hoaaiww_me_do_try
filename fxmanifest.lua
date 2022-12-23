@@ -1,10 +1,10 @@
 fx_version 'cerulean'
 game 'gta5'
 
-name 'ARP /ME, DO & TRY'
+name 'HOAAIWW /ME, /DO & /TRY'
 description '/me, /do & /try commands'
 author 'hoaaiww'
-version '1.6'
+version '2.0'
 
 client_scripts {
     'config.lua',
@@ -13,8 +13,5 @@ client_scripts {
 
 server_scripts {
     'config.lua',
-    '@mysql-async/lib/MySQL.lua',
     'server/server.lua'
 }
-
-dependency 'es_extended' -- https://github.com/esx-framework/esx-legacy.git
