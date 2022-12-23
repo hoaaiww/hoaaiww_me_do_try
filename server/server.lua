@@ -16,7 +16,7 @@ function executeCommand(source, tab)
         end
         tab['name'] = playerName
     end
-    TriggerClientEvent('arp_medotryhave:showText', -1, source, tab)
+    TriggerClientEvent('hoaaiww_medotryhave:showText', -1, source, tab)
 
     if Config.LogDiscord then
         DiscordLog(tab.type, '**'..GetPlayerName(source)..'** executed a */'..tab.type..'* command.\n\n`Content:` ' .. tab.text .. (tab.type == 'try' and ('\n`Result:`' .. (tab.success and ' Successful' or ' Unsuccessful'))))
@@ -104,9 +104,9 @@ if Config.checkForUpdates then
 			if err == 200 then
 				local data = json.decode(response)
 				if version ~= data.medotryVersion and tonumber(version) < tonumber(data.medotryVersion) then
-					print("Resource [^2"..resourceName.."^7] is ^1outdated^7.\nLatest version: ^3"..data.medotryVersion.."\n^7Installed version: ^1"..version.."\n^2Update ^7you resource here: ^5https://github.com/hoaaiww/arp_me_do_try ^7")
+					print("Resource [^2"..resourceName.."^7] is ^1outdated^7.\nLatest version: ^3"..data.medotryVersion.."\n^7Installed version: ^1"..version.."\n^2Update ^7you resource here: ^5https://github.com/hoaaiww/hoaaiww_me_do_try ^7")
 				elseif tonumber(version) > tonumber(data.medotryVersion) then
-					print("Resource [^2"..resourceName.."^7] is on ^1higher^7 version then the current up to date version! Please check to update: ^5https://github.com/hoaaiww/arp_me_do_try ^7")
+					print("Resource [^2"..resourceName.."^7] is on ^1higher^7 version then the current up to date version! Please check to update: ^5https://github.com/hoaaiww/hoaaiww_me_do_try ^7")
 				else
 					print("Resource [^2"..resourceName.."^7] is ^2up to date^7! Version: ^2" .. version .."^7")
 				end
