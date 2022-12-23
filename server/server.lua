@@ -1,5 +1,4 @@
 ESX = nil
-local success = nil -- Don't touch!
 
 function debug(info, debugMsg)
     if Config.Debug then
