@@ -1,4 +1,4 @@
-<h1 align='center'>Me, Do & Try</a></h1>
+<h1 align='center'>Me, Do & Try</h1>
 
 #### UPDATE 2.0
 * Optimized resource and fixed all issues.
